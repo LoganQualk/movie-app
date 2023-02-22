@@ -1,23 +1,21 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import { getMovie } from './components/api'
 import './App.css'
 
 function App() {
-  const [message, setMessage] = useState('');
-  const [updated, setUpdated] = useState(message);
+  const title = useRef(null); //this isn't the starting value of the input - it is the starting value of the reference - use at a specific moment -- useState is when things are constantly changing
+  const [updated, setUpdated] = useState(null);
 
-  const handleChange = (e) => {
-    setMessage(e.target.value);
-  }
-
-  const handleClick = () => {
-    setUpdated(message);
-    console.log(message);
+  const handleClick = async () => {
+    let result = await getMovie(title.current.value);
+    setUpdated(result);
+    console.log(result);
   }
 
   return (
     <div>
       <h1>Hey Simon</h1>
-      <input type="text" id="searchInput" onChange={handleChange} defaultValue={message}/>
+      <input ref={title} type="text" id="searchInput"/>
       <button onClick={handleClick}>Search</button>
     </div>
     
