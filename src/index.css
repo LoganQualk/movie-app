@@ -1,0 +1,46 @@
+html, body {
+    background-color: #121212;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.whiteText {
+    color: aliceblue;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mainContainer {
+    min-width: 75%;
+    width: 100%;
+    min-height: 75%;
+    height: 100%;
+    align-items: center;
+}
+
+.searchContainer {
+    min-width: 25%;
+    width: 25%;
+}
