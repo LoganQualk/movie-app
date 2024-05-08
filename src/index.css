@@ -11,8 +11,6 @@ html, body {
 #root {
     display: flex;
     justify-content: center;
-    width: 100vw;
-    height: 100vh;
 }
 
 .whiteText {
@@ -21,6 +19,9 @@ html, body {
 
 .flex {
     display: flex;
+}
+
+.flex-column {
     flex-direction: column;
 }
 
@@ -32,15 +33,51 @@ html, body {
     text-align: center;
 }
 
+#guessesHeader {
+    font-weight: bold;
+}
+
+#loserText {
+    font-weight: bold;
+    color: red;
+    font-size: 1.5rem;
+}
+
+#winnerText {
+    font-weight: bold;
+    color: green;
+    font-size: 1.5rem;
+}
+
+#restartButton {
+    width: 50%;
+    margin-left: 25%; /* lazy */
+}
+
+#searchButton {
+    width: 50%;
+    margin-left: 25%; /* lazy */
+    
+}
+
+#searchInput {
+    width: 48.5%;
+    margin-left: 25%; /* lazy */
+}
+
 .mainContainer {
     min-width: 75%;
     width: 100%;
     min-height: 75%;
-    height: 100%;
     align-items: center;
 }
 
 .searchContainer {
     min-width: 25%;
-    width: 25%;
+    width: 33%;
+}
+
+.moviePosters {
+    margin: 1rem 2rem;
+    box-shadow: 5px 5px 5px rgb(160, 160, 160);
 }
